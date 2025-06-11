@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DevInfor>
+<Wechat AppId="wx189fde5f93808eba" AppSecret="44aab18838ace92c91cbe4e031e941e7" />
+<WechatMoments AppId="wx189fde5f93808eba" AppSecret="44aab18838ace92c91cbe4e031e941e7" />
+<WechatFavorite AppId="wx189fde5f93808eba" AppSecret="44aab18838ace92c91cbe4e031e941e7" />
+<SinaWeibo AppKey="3550862881" AppSecret="b1cba787ce49df2e46a344a54c2cc0c3" RedirectUrl="http://www.sharesdk.cn" />
+<QQ AppId="101740097" AppKey="56191eb79a89707475d0b10b80995f86" />
+<QZone AppId="101740097" AppKey="56191eb79a89707475d0b10b80995f86" />
+</DevInfor>

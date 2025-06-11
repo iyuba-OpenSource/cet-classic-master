@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#99000000"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_gravity="center"
+        android:background="@drawable/bg_app_dialog"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="15dp"
+            tools:text="提示"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            tools:text="@string/written_off_tip_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/et_input_password"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:background="@drawable/bg_white_retangle_12_radius"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            android:layout_marginTop="15dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:inputType="textPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            app:constraint_referenced_ids="et_input_password, tv_content"
+            app:barrierDirection="bottom"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        <View
+            android:id="@+id/line1"
+            app:layout_constraintTop_toBottomOf="@id/barrier"
+            android:layout_marginTop="15dp"
+            android:background="#c6c6c7"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <View
+            android:id="@+id/line2"
+            android:background="#c6c6c7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line1"
+            android:layout_width="1dp"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            tools:text="@string/cancel"
+            android:gravity="center"
+            android:textColor="@color/dodgerblue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/line2"
+            app:layout_constraintTop_toTopOf="@id/line2"
+            app:layout_constraintBottom_toBottomOf="@id/line2"
+            android:textSize="18sp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            app:layout_constraintTop_toTopOf="@id/line2"
+            app:layout_constraintBottom_toBottomOf="@id/line2"
+            app:layout_constraintStart_toStartOf="@id/line2"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="继续注销"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/dodgerblue"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

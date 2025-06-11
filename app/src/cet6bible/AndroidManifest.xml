@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+
+        <activity
+            android:name="com.iyuba.cet6.wxapi.WXPayEntryActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:exported="true"
+            android:taskAffinity="com.iyuba.cet6"
+            android:launchMode="singleTask">
+        </activity>
+        <activity
+            android:name="com.iyuba.CET6bible.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.iyuba.CET6bible.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="10539977" />
+        <meta-data
+            android:name="MIPUSH_APPID"
+            android:value="\ 2882303761517475134" />
+        <meta-data
+            android:name="MIPUSH_APPKEY"
+            android:value="\ 5361747588134" />
+    </application>
+
+</manifest>

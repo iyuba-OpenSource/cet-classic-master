@@ -1,0 +1,72 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/company/cetClassic/abilitytest/src/main/res/layout/act_abilitymapsub.xml" value="0.38697916666666665" />
+        <entry key="..\:/company/cetClassic/abilitytest/src/main/res/layout/layout_titlebar_sub.xml" value="0.38697916666666665" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/drawable-xhdpi/bg_app_dialog.xml" value="0.163" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/drawable-xhdpi/bg_white_retangle_12_radius.xml" value="0.163" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/about.xml" value="0.37592592592592594" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/activity_delete_audio.xml" value="0.33" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/activity_favorite.xml" value="0.1" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/activity_feedback_question.xml" value="0.2265625" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/activity_payorder.xml" value="0.30185185185185187" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/activity_word_detail_main.xml" value="0.21354166666666666" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/activity_word_step_main.xml" value="0.38697916666666665" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/adapter.xml" value="0.1" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/alert_text.xml" value="0.26197916666666665" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/dialog_layout.xml" value="0.38697916666666665" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/fragment_listening_cet.xml" value="0.1" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/fragment_read_evaluate.xml" value="0.20729166666666668" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/help_use.xml" value="0.1" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/home.xml" value="0.1" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/item_read_evaluate.xml" value="0.3490740740740741" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/item_read_rank_work.xml" value="0.15677083333333333" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/item_top3_read_rank.xml" value="0.1" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/item_write.xml" value="0.25625" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/layout_ad_banner.xml" value="0.38697916666666665" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/main.xml" value="0.23854166666666668" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/popup_window.xml" value="0.38697916666666665" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/section_a.xml" value="0.17703349282296652" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/set.xml" value="0.38697916666666665" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/simple_word_header.xml" value="0.15989583333333332" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/simple_word_item.xml" value="0.14791666666666667" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/welcome.xml" value="0.2265625" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/layout/year_item_new1.xml" value="0.38697916666666665" />
+        <entry key="..\:/company/cetClassic/app/src/main/res/menu/menu_home_qq.xml" value="0.38697916666666665" />
+        <entry key="..\:/company/cetClassic/base/src/main/res/layout/activity_main.xml" value="0.24479166666666666" />
+        <entry key="..\:/company/cetClassic/cetbible_lib/src/main/res/layout/activity_buyvip.xml" value="0.30185185185185187" />
+        <entry key="..\:/company/cetClassic/cetbible_lib/src/main/res/layout/activity_sign.xml" value="0.21666666666666667" />
+        <entry key="..\:/company/cetClassic/cetbible_lib/src/main/res/layout/activity_study_ranking.xml" value="0.38697916666666665" />
+        <entry key="..\:/company/cetClassic/cetbible_lib/src/main/res/layout/discover.xml" value="0.203125" />
+        <entry key="..\:/company/cetClassic/cetbible_lib/src/main/res/layout/fanslist.xml" value="0.38697916666666665" />
+        <entry key="..\:/company/cetClassic/cetbible_lib/src/main/res/layout/fragment_learn_rank.xml" value="0.38697916666666665" />
+        <entry key="..\:/company/cetClassic/cetbible_lib/src/main/res/layout/fragment_test_rank.xml" value="0.38697916666666665" />
+        <entry key="..\:/company/cetClassic/cetbible_lib/src/main/res/layout/lib_native_ad_row.xml" value="0.25625" />
+        <entry key="..\:/company/cetClassic/cetbible_lib/src/main/res/layout/me.xml" value="0.33" />
+        <entry key="..\:/company/cetClassic/cetbible_lib/src/main/res/layout/me_top.xml" value="0.38697916666666665" />
+        <entry key="..\:/company/cetClassic/cetbible_lib/src/main/res/layout/rank_info_item.xml" value="0.38697916666666665" />
+        <entry key="..\:/company/cetClassic/cetbible_lib/src/main/res/layout/rank_learn_info_item.xml" value="0.38697916666666665" />
+        <entry key="..\:/company/cetClassic/cetbible_lib/src/main/res/layout/regist_layout.xml" value="0.28703703703703703" />
+        <entry key="..\:/company/cetClassic/cetbible_lib/src/main/res/layout/regist_layout_phone.xml" value="0.38697916666666665" />
+        <entry key="..\:/company/cetClassic/cetbible_lib/src/main/res/layout/vip_center_new.xml" value="0.38697916666666665" />
+        <entry key="..\:/company/cetClassic/cetbible_lib/src/main/res/layout/web.xml" value="0.22314814814814815" />
+        <entry key="..\:/company/cetClassic/mob/src/main/res/drawable/ssdk_oks_classic_platform_cell_back.xml" value="0.2055" />
+        <entry key="..\:/company/cetClassic/mob/src/main/res/drawable/ssdk_oks_classic_progressbar.xml" value="0.2055" />
+        <entry key="..\:/company/cetClassic/word/src/main/res/layout/activity_word_detail.xml" value="0.15989583333333332" />
+        <entry key="..\:/company/cetClassic/word/src/main/res/layout/activity_word_list.xml" value="0.15989583333333332" />
+        <entry key="..\:/company/cetClassic/word/src/main/res/layout/activity_word_step.xml" value="0.15989583333333332" />
+        <entry key="..\:/company/cetClassic/word/src/main/res/layout/activity_word_test.xml" value="0.15989583333333332" />
+        <entry key="..\:/company/cetClassic/word/src/main/res/layout/simple_word_header.xml" value="0.27239583333333334" />
+        <entry key="..\:/company/cetClassic/word/src/main/res/layout/wordtest_simple_word_item.xml" value="0.14791666666666667" />
+        <entry key="..\:/company/cetClassic/word/src/main/res/layout/wordtest_step_item.xml" value="0.15989583333333332" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

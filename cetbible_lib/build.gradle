@@ -1,0 +1,208 @@
+apply plugin: 'com.android.library'
+apply from: '../mobConfigure.gradle'
+dependencies {
+
+    api 'junit:junit:4.13.2'
+
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation files('libs\\org.apache.http.legacy.jar')
+    final PERMISSION_DISPATCHER_VERSION = "$rootProject.ext.permissionDispatcherVersion"
+    final SUPPORT_LIBRARY_VERSION = "$rootProject.ext.supportLibraryVersion"
+    final RETROFIT_VERSION = "$rootProject.ext.retrofitVersion"
+    final OKHTTP_VERSION = "$rootProject.ext.okhttpVersion"
+    api fileTree(include: '*.jar', dir: 'libs')
+    api project(':MultiThreadDownloader')
+    api project(':configation')
+//    api project(':mob')
+
+    implementation project(':http233')
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    //noinspection GradleCompatible
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation('com.nostra13.universalimageloader:universal-image-loader:1.9.5') {
+        exclude group: 'com.android.support'
+    }
+
+    implementation("me.drakeet.materialdialog:library:1.3.1") {
+        exclude group: 'com.android.support'
+    }
+    implementation('com.github.ksoichiro:android-observablescrollview:1.5.0') {
+        exclude group: 'com.android.support'
+    }
+    implementation('com.bigkoo:convenientbanner:2.0.5') {
+        exclude group: 'com.android.support'
+    }
+
+    //    数据库
+    implementation 'org.litepal.android:core:2.0.0'
+    implementation project(':pullToRefresh')
+    implementation "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
+    implementation('org.sufficientlysecure:html-textview:3.5') {
+        exclude group: 'com.android.support'
+    }
+    implementation "org.greenrobot:eventbus:$rootProject.ext.eventBusVersion"
+    implementation "com.github.AnthonyFermin:DropDownView:$rootProject.ext.dropDownViewVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.okhttpVersion"
+
+    implementation "com.airbnb.android:lottie:5.2.0"
+
+    api(name: 'imooclib-1.7.0', ext: 'aar')
+    api(name: 'commonres-1.2.0', ext: 'aar')
+    api(name: 'dlex-1.0.4', ext: 'aar')
+    api(name: 'mvp-1.0.0', ext: 'aar')
+    api(name: 'player-1.2.8', ext: 'aar')
+    api(name: 'player-exo-1.2.8-alpha01', ext: 'aar')
+
+    api(name: 'recycler-0.0.3', ext: 'aar')
+    api(name: 'sonic-1.0.0', ext: 'aar')
+    api(name: 'toolbox-1.1.0', ext: 'aar')
+    api(name: 'user-0.2.7', ext: 'aar')
+    implementation(name: 'subtitle-1.2.2', ext: 'aar')
+    api(name: 'personalhomelibrary-1.5.8', ext: 'aar')
+    //有道
+    api(name: 'youdaosdk_4.2.45', ext: 'aar')
+    api(name: 'pushlib-1.1.3', ext: 'aar')
+    api(name: 'iyubamovies-1.2.9', ext: 'aar')
+    api(name: 'basicdl-1.2.3-alpha01', ext: 'aar')
+    api(name: 'intelligence-1.3.3', ext: 'aar')
+    api(name: 'textpage-1.0.0', ext: 'aar')
+    api(name: 'privacy-1.0.4', ext: 'aar')
+    api(name: 'waitdialog-1.2.1', ext: 'aar')
+    api(name: 'commonvar-1.0.0', ext: 'aar')
+    api(name: 'headlinelibrary-1.7.9', ext: 'aar')
+    api(name: 'headlinesearch-1.3.1', ext: 'aar')
+    api(name: 'progresswheel-1.0.1', ext: 'aar')
+    api(name: 'imagetextview-1.2.1', ext: 'aar')
+    api(name: 'roundprogressbar-1.0.0', ext: 'aar')
+    api(name: 'trainingcamp-1.1.7', ext: 'aar')
+    api(name: 'popmenu-0.2.2', ext: 'aar')
+    api(name: 'mse-0.2.7', ext: 'aar')
+    api(name: 'mp3trans-0.2.0', ext: 'aar')
+    api(name: 'recycler-0.2.0', ext: 'aar')
+    api(name: 'vpager-0.1.0', ext: 'aar')
+    api(name: 'share-0.1.3', ext: 'aar')
+    api(name: 'share-mob-0.1.3', ext: 'aar')
+    api(name: 'parse-0.2.4', ext: 'aar')
+    api(name: 'resize-1.0.0', ext: 'aar')
+    api(name: 'basicfavor-1.2.8-alpha01', ext: 'aar')
+    api(name: 'universitypicker-0.2.1', ext: 'aar')
+
+    api "com.h6ah4i.android.widget.verticalseekbar:verticalseekbar:1.0.0"
+
+//    implementation "tv.danmaku.ijk.media:ijkplayer-java:$rootProject.ext.ijkVersion"
+//    implementation "tv.danmaku.ijk.media:ijkplayer-armv7a:$rootProject.ext.ijkVersion"
+//    implementation "tv.danmaku.ijk.media:ijkplayer-arm64:$rootProject.ext.ijkVersion"
+//    implementation "tv.danmaku.ijk.media:ijkplayer-x86:$rootProject.ext.ijkVersion"
+//    implementation "tv.danmaku.ijk.media:ijkplayer-x86_64:$rootProject.ext.ijkVersion"
+
+    api 'com.umeng.umsdk:common:+'// 必选
+    implementation 'com.umeng.umsdk:asms:+'// 必选
+    implementation 'com.umeng.umsdk:uyumao:+'
+    // 高级运营分析功能依赖库，使用U-App卸载分析、开启反作弊能力请务必集成。common需搭配v9.6.3及以上版本，asms需搭配v1.7.0及以上版本。需更新隐私声明。
+    implementation 'com.umeng.umsdk:apm:+'// U-APM产品包依赖，必选
+
+
+    api "com.scwang.smartrefresh:SmartRefreshLayout:$rootProject.ext.smartRefreshVersion"
+    api "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
+    api "com.squareup.retrofit2:adapter-rxjava2:$rootProject.ext.retrofitVersion"
+    implementation("com.squareup.retrofit2:converter-scalars:$rootProject.ext.retrofitVersion")
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.ext.rxAndroidVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.ext.rxJavaVersion"
+    api "com.squareup.retrofit2:retrofit:$RETROFIT_VERSION"
+    api "com.squareup.retrofit2:converter-gson:$RETROFIT_VERSION"
+    api('com.android.volley:volley:1.0.0') {
+        exclude group: 'com.android.support'
+    }
+
+//    api 'com.github.xuexiangjys.XUtil:xutil-core:1.1.6'
+//    api 'com.github.xuexiangjys.XUtil:xutil-sub:1.1.6'
+//推送核心库
+//    api 'com.github.xuexiangjys.XPush:xpush-core:1.0.1'
+//推送保活库
+//    api 'com.github.xuexiangjys.XPush:keeplive:1.0.1'
+//    implementation 'com.github.xuexiangjys.XPush:xpush-huawei:1.0.1'
+//    api 'com.github.xuexiangjys.XPush:xpush-xiaomi:1.0.1'
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+
+    compileOnly 'de.hdodenhof:circleimageview:2.2.0'
+    api "com.daimajia.swipelayout:library:1.2.0@aar"
+    implementation 'com.github.naman14:TAndroidLame:1.1'
+
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    api('com.google.android.exoplayer:exoplayer:2.19.1')
+
+
+    api(files("libs/Baidu_MobAds_SDK-release_v9.35.aar"))
+    api(files("libs/beizi_ad_sdk_3.5.0.9.aar"))
+    api(files("libs/beizi_fusion_sdk_4.90.4.11.aar"))
+    api(files("libs/data-iyuba-0.2.0-fix2.aar"))
+    api(files("libs/data-ydsdk-0.3.9-fix2.aar"))
+    api(files("libs/data-youdao-0.1.8-fix2.aar"))
+
+    api(files("libs/GDTSDK.unionNormal.4.602.1472.aar"))
+    api(files("libs/kssdk-ad-3.3.63-publishRelease-085cdfe109.aar"))
+    api(files("libs/mediatom-0.3.9-fix.aar"))
+    api(files("libs/mediatom-adhub-adapt-0.3.9.aar"))
+    api(files("libs/mediatom-bd-adapt-0.3.9-fix.aar"))
+    api(files("libs/mediatom-ks-adapt-0.3.9.aar"))
+    api(files("libs/mediatom-tt-adapt-0.3.9-fix4.aar"))
+    api(files("libs/mediatom-tx-adapt-0.3.9-fix2.aar"))
+    api(files("libs/mixnative-0.3.9-fix3.aar"))
+
+    api(files("libs/oaid_sdk_2.5.1.aar"))
+    api(files("libs/open_ad_sdk_6.4.1.6.aar"))
+    api(files("libs/s2s-0.3.9.aar"))
+
+    api(files("libs/sdk-0.3.9.aar"))
+    api(files("libs/ydsdk-0.3.9-fix.aar"))
+
+    //广告共同 在BBC六分钟英语中
+    api files('libs/ad_list_1.6.5.aar')
+
+    api 'com.alipay.sdk:alipaysdk-android:+@aar'
+
+
+    //adapter
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.49-androidx'
+
+    api 'androidx.room:room-runtime:2.5.1'
+    annotationProcessor 'androidx.room:room-compiler:2.5.1'
+
+    api 'com.tencent.mm.opensdk:wechat-sdk-android:+'
+}
+
+
+android {
+
+    buildFeatures {
+
+        buildConfig true
+    }
+    namespace 'com.iyuba.biblelib'
+
+    compileSdkVersion 34
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        minSdkVersion min_sdk_version
+        targetSdkVersion 30
+    }
+
+    repositories {
+
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}

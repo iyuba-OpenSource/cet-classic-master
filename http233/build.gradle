@@ -1,0 +1,16 @@
+apply plugin: 'com.android.library'
+
+dependencies {
+}
+
+android {
+
+    namespace 'com.iyuba.http'
+
+    compileSdkVersion 34
+
+    defaultConfig {
+        minSdkVersion min_sdk_version
+        targetSdkVersion targetSdkVersion
+    }
+}

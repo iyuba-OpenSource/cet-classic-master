@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/rank_olive"
+            android:layout_width="92dp"
+            android:layout_height="75dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/study_ranking_champion_bg" />
+
+        <com.iyuba.core.widget.circularimageview.CircularImageView
+            android:id="@+id/rank_user_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3.5dp"
+            android:background="@drawable/rank_blue" />
+
+        <TextView
+            android:id="@+id/rank_user_image_text"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3.5dp"
+            android:background="@drawable/rank_blue"
+            android:gravity="center"
+            android:text="C"
+            android:textColor="@color/whitesmoke" />
+
+        <ImageView
+            android:layout_width="106dp"
+            android:layout_height="32dp"
+            android:layout_alignBottom="@+id/rank_olive"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/study_ranking_champion_logo" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/rank_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        tools:text="cloud-sea" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/tv_user_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="1"
+            android:textSize="18sp" />
+
+        <com.iyuba.core.widget.circularimageview.CircularImageView
+            android:id="@+id/test_rank_user_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@id/tv_user_rank"
+            android:src="@drawable/noavatar_small" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/test_rank_user_image"
+            android:text="爱语吧"
+            android:textSize="16sp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tr_tv_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="文章总数"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tr_tv_word_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="单词总数:"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#e2e2e2" />
+
+    <ListView
+        android:id="@+id/test_rank_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#e2e2e2"
+        android:dividerHeight="0.5dp">
+
+    </ListView>
+
+</LinearLayout>

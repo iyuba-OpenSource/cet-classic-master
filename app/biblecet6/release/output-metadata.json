@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.iyuba.cet6.bible",
+  "variantName": "biblecet6Release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 602,
+      "versionName": "6.0.2",
+      "outputFile": "biblecet6-6.0.2.apk"
+    }
+  ],
+  "elementType": "File"
+}

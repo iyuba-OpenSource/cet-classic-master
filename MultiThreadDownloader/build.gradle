@@ -1,0 +1,17 @@
+apply plugin: 'com.android.library'
+
+dependencies {
+    implementation fileTree(include: '*.jar', dir: 'libs')
+}
+
+android {
+
+    namespace 'com.iyuba.multithread'
+
+    compileSdkVersion 34
+
+    defaultConfig {
+        minSdkVersion min_sdk_version
+        targetSdkVersion targetSdkVersion
+    }
+}

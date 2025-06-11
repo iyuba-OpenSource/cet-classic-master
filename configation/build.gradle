@@ -1,0 +1,18 @@
+apply plugin: 'com.android.library'
+
+dependencies {
+//    implementation fileTree(include: '*.jar', dir: 'libs')
+//    compileOnly('commons-codec-1.4.jar')
+    api project(':base')
+}
+
+android {
+
+    namespace 'com.iyuba.configation'
+    compileSdkVersion 34
+
+    defaultConfig {
+        minSdkVersion min_sdk_version
+        targetSdkVersion targetSdkVersion
+    }
+}

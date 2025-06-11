@@ -1,0 +1,111 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+ext {
+    compileSdkVersion = '29'
+    gsonVersion ='2.8.6'
+    supportLibraryVersion = '28.0.0'
+    iyubaADVersion = '0.1.2'
+    retrofitVersion = '2.9.0'
+    okhttpVersion = '3.12.0'
+    rxAndroidVersion = '2.1.1'
+    rxJavaVersion = '2.2.21'
+    glideVersion = '4.12.0'
+    eventBusVersion = '3.0.0'
+    permissionDispatcherVersion = '3.0.1'
+    timberVersion = '4.7.1'
+    ijkVersion = '0.8.8@aar'
+
+    subtitleVersion = '1.0.7'
+    dlexVersion = '1.0.2'
+    playerVersion = '1.2.5'
+    recyclerVersion = '0.0.3'
+    youdaoSdkVersion = '4.2.16'
+    mobShareVersion = '3.0.0'
+    mobSmsVersion = '3.0.0'
+    mobToolsVersion = '2017.0608.1618'
+    circleImageVersion = '2.2.0'
+    smartRefreshVersion = '1.1.0'
+    bannerVersion = '1.4.10'
+    dropDownViewVersion = '1.0.1'
+
+    mvpVersion = '1.0.0'
+    toolboxVersion = '1.0.9'
+
+    umengCommonVersion = '9.3.8'
+    umengUtdidVersion = '1.1.5.3'
+    umengPushVersion = '6.5.2'
+    umengUnionVersion = '1.4.1'
+    umengAsmsVersion = '1.2.1'
+    umengShareVersion = '7.1.4'
+}
+
+buildscript {
+    ext.compile_sdk_version = 33
+    ext.target_sdk_version = 29
+    ext.min_sdk_version = 23
+    ext.build_tools_version = '29.0.2'
+    ext.android_support_version = '28.0.0'
+    ext.retrofit_version = '2.5.0'
+    ext.gson_version = '2.8.6'
+
+    repositories {
+
+
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+//        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+        maven { url 'https://repo1.maven.org/maven2/' }
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://mvn.mob.com/android' }
+        mavenCentral()
+        google()
+//        mavenCentral()
+//        gradlePluginPortal()
+    }
+    dependencies {
+
+        classpath 'com.android.tools.build:gradle:8.7.3'
+        classpath "com.mob.sdk:MobSDK2:+"
+    }
+}
+
+
+
+allprojects {
+    repositories {
+
+//        mavenCentral()
+//        jcenter()
+//        google()
+
+        flatDir {
+            dirs '../../common/mob/libs'
+        }
+        flatDir {
+            dirs '../../common/headlinelibrary/libs'
+        }
+        flatDir {
+            dirs '../configation/libs'
+        }
+        flatDir {
+            dirs '../headlinelibrary/libs'
+        }
+
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+//        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+        maven { url 'https://repo1.maven.org/maven2/' }
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://mvn.mob.com/android' }
+        mavenCentral()
+        google()
+
+//        gradlePluginPortal()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

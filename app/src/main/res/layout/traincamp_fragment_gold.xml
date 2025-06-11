@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clipChildren="false">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorTrainCamp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="?android:attr/actionBarSize"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/traincamp_ic_back" />
+
+        <TextView
+            android:id="@+id/title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/traincamp_train_camp"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/show_more"
+            android:layout_width="?android:attr/actionBarSize"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="center"
+            android:src="@drawable/traincamp_ic_show_more"
+            tools:visibility="visible" />
+
+    </RelativeLayout>
+
+    <com.iyuba.trainingcamp.ui.widget.SwipeRefreshLayoutCompat
+        android:id="@+id/smart_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:fillViewport="true">
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/colorTrainCamp"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                tools:text="score80" />
+
+            <TextView
+                android:id="@+id/lesson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="35dp"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                tools:text="8/30" />
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lesson"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="6dp"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/button_class"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="41dp"
+                    android:layout_marginRight="43dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/traincamp_introduce_drawable"
+                    android:clickable="false"
+                    android:textColor="@android:color/white"
+                    android:visibility="invisible"
+                    tools:text="@string/traincamp_pronounciation_class" />
+
+                <Button
+                    android:id="@+id/introduce"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginRight="41dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/traincamp_introduce_drawable"
+                    android:text="@string/traincamp_class_introduction"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/ll">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/trainingcamp_pager_placeholder"
+                    android:clipChildren="false"
+                    android:orientation="horizontal"
+                    app:layout_constraintDimensionRatio="H, 16:9"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="vertical"
+                    android:paddingTop="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/viewpager">
+
+                    <LinearLayout
+                        android:id="@+id/warm_up"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/img_warmup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/traingingcamp_first_icon_warmup"
+                            android:tag="skin:trainingcamp_first_icon_warmup:src" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="52dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:gravity="bottom"
+                                android:text="学前热身"
+                                android:textColor="#000000"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="top"
+                                android:text="Warm-Up"
+                                android:textColor="#000000"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <com.example.xlhratingbar_lib.XLHRatingBar
+                            android:id="@+id/ratingBarwarmup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:canEdit="false"
+                            app:countSelected="0"
+                            app:differentSize="false"
+                            app:dividerWidth="3dp"
+                            app:starCount="5"
+                            app:stateResId="@drawable/traincamp_selector_star_appraise"
+                            app:widthAndHeight="13dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/word"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/img_words"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/traingingcamp_first_icon_words" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="52dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:gravity="bottom"
+                                android:text="单词学习"
+                                android:textColor="#000000"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="top"
+                                android:text="Word Learing"
+                                android:textColor="#000000"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <com.example.xlhratingbar_lib.XLHRatingBar
+                            android:id="@+id/ratingBarword"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:canEdit="false"
+                            app:countSelected="0"
+                            app:differentSize="false"
+                            app:dividerWidth="3dp"
+                            app:starCount="5"
+                            app:stateResId="@drawable/traincamp_selector_star_appraise"
+                            app:widthAndHeight="13dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/sentence"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/img_sentence"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/traingingcamp_first_icon_sentence" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:gravity="bottom"
+                                android:text="口语评测"
+                                android:textColor="#000000"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="top"
+                                android:text="Speaking Test"
+                                android:textColor="#000000"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <com.example.xlhratingbar_lib.XLHRatingBar
+                            android:id="@+id/ratingBarSentence"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:canEdit="false"
+                            app:countSelected="0"
+                            app:differentSize="false"
+                            app:dividerWidth="3dp"
+                            app:starCount="5"
+                            app:stateResId="@drawable/traincamp_selector_star_appraise"
+                            app:widthAndHeight="13dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/exam"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/img_exam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/traingingcamp_first_icon_exam" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="6dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="34dp"
+                                android:layout_marginBottom="2dp"
+                                android:layout_weight="1"
+                                android:gravity="bottom"
+                                android:text="听力测试"
+                                android:textColor="#000000"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="top"
+                                android:text="Listening Test"
+                                android:textColor="#000000"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+
+                        <com.example.xlhratingbar_lib.XLHRatingBar
+                            android:id="@+id/ratingBarExam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:canEdit="false"
+                            app:countSelected="0"
+                            app:differentSize="false"
+                            app:dividerWidth="3dp"
+                            app:starCount="5"
+                            app:stateResId="@drawable/traincamp_selector_star_appraise"
+                            app:widthAndHeight="13dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+    </com.iyuba.trainingcamp.ui.widget.SwipeRefreshLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

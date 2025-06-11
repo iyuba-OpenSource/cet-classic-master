@@ -1,0 +1,68 @@
+apply plugin: 'com.android.library'
+apply from: '../mobConfigure.gradle'
+
+
+android {
+    compileSdk 34
+
+
+    defaultConfig {
+        minSdkVersion min_sdk_version
+        targetSdkVersion 30
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+
+    repositories {
+        flatDir {
+            dirs 'libs', '../cetbible_lib/libs'
+        }
+    }
+
+    namespace 'com.iyuba.abilitytest'
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api project(':cetbible_lib')
+    api(name: 'privacy-1.0.4', ext: 'aar')
+
+
+    //    provided files('libs/Sunflower.jar')//科大讯飞的包
+    //    provided files('libs/Msc.jar')//科大讯飞的包
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation('com.android.volley:volley:1.0.0') {
+        exclude group: 'com.android.support'
+    }
+    //下载
+    implementation 'com.liulishuo.filedownloader:library:1.6.5'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    compileOnly "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.okhttpVersion"
+    implementation 'com.flyco.roundview:FlycoRoundView_Lib:1.1.4'
+    //    compile 'com.iyuba.module:imooclib:1.0.6'
+//    implementation 'com.iflytek:iseSdk:2.0.1018.1013'
+
+    implementation "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
+    implementation 'org.greenrobot:eventbus:3.0.0'
+//    implementation project(':mob')
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+
+    implementation 'com.github.tbruyelle:rxpermissions:0.12'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
+    implementation "io.reactivex.rxjava3:rxjava:3.1.8"
+
+    //弹窗的框架
+    api 'io.github.razerdp:BasePopup:3.2.0'
+}

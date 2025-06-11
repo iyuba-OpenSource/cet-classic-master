@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.iyuba.CET4bible",
+  "variantName": "cet4bibleRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 636,
+      "versionName": "6.3.6",
+      "outputFile": "cet4bible-6.3.6.apk"
+    }
+  ],
+  "elementType": "File"
+}

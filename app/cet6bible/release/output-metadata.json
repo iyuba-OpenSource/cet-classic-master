@@ -1,0 +1,37 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.iyuba.cet6",
+  "variantName": "cet6bibleRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 720,
+      "versionName": "7.7.22850",
+      "outputFile": "cet6bible-7.7.22850.apK"
+    }
+  ],
+  "elementType": "File",
+  "baselineProfiles": [
+    {
+      "minApi": 28,
+      "maxApi": 30,
+      "baselineProfiles": [
+        "baselineProfiles/1/cet6bible-7.7.22850.dm"
+      ]
+    },
+    {
+      "minApi": 31,
+      "maxApi": 2147483647,
+      "baselineProfiles": [
+        "baselineProfiles/0/cet6bible-7.7.22850.dm"
+      ]
+    }
+  ],
+  "minSdkVersionForDexing": 23
+}
